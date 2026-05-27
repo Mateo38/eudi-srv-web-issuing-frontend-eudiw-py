@@ -117,6 +117,7 @@ def display_form():
             mandatory_attributes=mandatory_attributes,
             optional_attributes=optional_attributes,
             redirect_url=redirect_url,
+            session_id=session_id,
         )
 
     return jsonify({"status": "error", "message": "Payload not found"}), 400

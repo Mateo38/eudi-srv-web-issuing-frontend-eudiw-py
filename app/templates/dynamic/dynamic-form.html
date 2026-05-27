@@ -253,6 +253,7 @@
 
             <form id="selectCountryForm" method="post" class="flex flex-col h-full" action="{{redirect_url}}"
                 onsubmit="return submitValidation()" enctype="multipart/form-data">
+                <input type="hidden" name="session_id" value="{{ session_id }}">
                 <div class="mt-10">
                     <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-6">Mandatory Information</h2>
                     {% for name, attr in mandatory_attributes.items() %}

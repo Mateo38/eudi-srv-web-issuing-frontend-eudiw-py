@@ -204,6 +204,7 @@ app/tests/report.html
 log
 
 frontend_config.yaml
+!railway/**
 
 # Node.js / npm
 # =========================

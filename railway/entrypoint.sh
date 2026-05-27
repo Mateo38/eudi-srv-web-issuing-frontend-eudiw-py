@@ -6,11 +6,11 @@ CONFIG="/app/railway/frontend_config.yaml"
 # Substitute URLs from environment variables if set
 if [ -n "$SERVICE_URL" ]; then
   sed -i "s|service_url:.*|service_url: \"$SERVICE_URL\"|" "$CONFIG"
-  sed -i "s|oauth_url:.*|oauth_url: \"$SERVICE_URL/oidc\"|" "$CONFIG"
 fi
 
 if [ -n "$BACKEND_URL" ]; then
   sed -i "s|backend_url:.*|backend_url: \"$BACKEND_URL\"|" "$CONFIG"
+  sed -i "s|oauth_url:.*|oauth_url: \"$BACKEND_URL/oidc\"|" "$CONFIG"
 fi
 
 # Create log directory

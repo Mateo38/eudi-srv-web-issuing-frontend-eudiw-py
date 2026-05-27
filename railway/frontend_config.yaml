@@ -1,0 +1,18 @@
+# Railway deployment config for EUDIW Issuer Frontend
+service_url: "https://eudi-issuer-frontend-production.up.railway.app"
+log_dir: "/tmp/logs/issuer_frontend.log"
+
+frontend_id: "railway-frontend-001"
+
+backend_url: "https://eudi-issuer-production.up.railway.app"
+oauth_url: "https://eudi-issuer-production.up.railway.app/oidc"
+
+credentials_supported:
+  - "eu.europa.ec.eudi.pid_mdoc"
+  - "eu.europa.ec.eudi.pid_vc_sd_jwt"
+  - "eu.europa.ec.eudi.mdl_mdoc"
+  - "eu.europa.ec.eudi.loyalty_mdoc"
+  - "eu.europa.ec.eudi.photoid"
+  - "eu.europa.ec.eudi.por_mdoc"
+  - "eu.europa.ec.eudi.iban_mdoc"
+  - "com.wlbank.access_mdoc"
