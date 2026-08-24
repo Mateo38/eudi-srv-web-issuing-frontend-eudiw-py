@@ -43,9 +43,6 @@ COPY --from=python-builder /install /usr/local
 COPY --from=node-builder /build/app/static/css/tailwind.css ./app/static/css/tailwind.css
 COPY . .
 
-# Railway: embed config and entrypoint
-COPY railway/frontend_config.yaml /app/railway/frontend_config.yaml
-COPY railway/entrypoint.sh /app/railway/entrypoint.sh
 RUN chmod +x /app/railway/entrypoint.sh
 
 RUN mkdir -p /tmp/logs
