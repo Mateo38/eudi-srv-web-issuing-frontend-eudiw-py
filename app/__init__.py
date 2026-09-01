@@ -279,6 +279,7 @@ def setup_metadata():
     openid_metadata["issuer"] = CONFIGURATION['service_url']
     openid_metadata["pushed_authorization_request_endpoint"] = f"{CONFIGURATION['service_url']}/pushed_authorization"
     oidc_metadata["credential_issuer"] = CONFIGURATION['service_url']
+    oidc_metadata["authorization_servers"] = [CONFIGURATION['backend_url']]
     oidc_metadata["display"][0]["logo"]["uri"] = f"{CONFIGURATION['service_url']}/ic-logo.png"
 
 
